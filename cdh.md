@@ -13,6 +13,13 @@ CDH5.13
 ![](/assets/WX20180913-152903.png)
 
 ## 准备工作
+- 安装系统依赖
+
+```shell
+yum install -y cyrus-sasl-gssapi cyrus-sasl-plain fuse fuse-libs gcc init-functions libxslt mod_ssl MySQL-python openssl openssl-devel perl portmap psmisc python-devel python-psycopg2 python-setuptools sqlite swig zlib gcc-c++ automake libtool flex bison pkgconfig gcc-c++ boost-devel libevent-devel zlib-devel Python-devel ruby-devel crypto-utils openssl openssl-devel glibc-static libstdc++-static ncurses-devel sqlite-devel readline-devel tk-devel gcc make cyrus-sasl-plain  cyrus-sasl-devel  cyrus-sasl-gssapi tkinter tcl-devel tk-devel bzip2-devel snappy
+
+```
+
 - 安装Oracle JDK: 
 
 ```shell
@@ -140,11 +147,7 @@ server_port=7182
 #mkdir -p /opt/cloudera/parcels
 #chown username:groupname /opt/cloudera/parcels
 ```
-- 初始化数据库
 
-```
-
-```
 
 ### 
 
