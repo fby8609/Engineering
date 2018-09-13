@@ -58,7 +58,15 @@ open https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_v
 
 ```shell
 下载cms manager
-# wget https://archive.cloudera.com/cm5/cm/5/cloudera-manager-el6-cm5.13.1_x86_64.tar.gz
+#wget https://archive.cloudera.com/cm5/cm/5/cloudera-manager-el6-cm5.13.1_x86_64.tar.gz
+创建manager目录
+#mkdir -p /opt/cloudera-manager
+#tar xzf cloudera-manager*.tar.gz -C /opt/cloudera-manager
+创建cms必要启动用户
+#useradd --system --home=/opt/cloudera-manager/cm-5.3.1/run/cloudera-scm-server --no-create-home --shell=/bin/false --comment "Cloudera SCM User" cloudera-scm
+创建cms本地数据目录
+#/var/lib/cloudera-scm-server
+#chown cloudera-scm:cloudera-scm /var/lib/cloudera-scm-server
 ```
 
 ### 
