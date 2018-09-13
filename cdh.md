@@ -14,7 +14,8 @@ CDH5.13
 
 ## 准备工作
 - 安装Oracle JDK: 
-```
+
+```shell
 open http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
 
 #tar -zxvf jdk-8u181-linux-x64.tar.gz -C /usr/java/
