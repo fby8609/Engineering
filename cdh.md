@@ -146,6 +146,13 @@ server_port=7182
 在每个集群节点创建parcels目录
 #mkdir -p /opt/cloudera/parcels
 #chown username:groupname /opt/cloudera/parcels
+启动server 和 agent
+
+#sudo $CMF_DEFAULTS/etc/init.d/cloudera-scm-server start 
+#sudo $CMF_DEFAULTS/etc/init.d/cloudera-scm-agent start 
+
+
+访问 http://127.0.0.1:8700
 ```
 
 
