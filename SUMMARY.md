@@ -4,6 +4,6 @@
     * [Linux](linux/README.md)
         * [Shell](linux/shell/walkfile.md)
     * [BigData](bigdata/README.md)
-        * [BigData](bigdata/cdh/CDH.md)
+        * [CDH安装部署](bigdata/cdh/CDH.md)
     * [NetWork](network/tcpip.md)
 
