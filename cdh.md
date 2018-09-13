@@ -67,6 +67,13 @@ open https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_v
 创建cms本地数据目录
 #/var/lib/cloudera-scm-server
 #chown cloudera-scm:cloudera-scm /var/lib/cloudera-scm-server
+更改agent配置文件
+# vim /opt/cloudera-manager/cm-5.13.1/etc/cloudera-scm-agent/config.ini
+server_host=cms-manager
+server_port=7182
+创建日志及配置目录
+# mkdir -p /var/log/{cloudera-scm-headlamp,cloudera-scm-firehose,cloudera-scm-alertpublisher,cloudera-scm-eventserver}
+# mkdir -p /var/lib/{cloudera-scm-headlamp,cloudera-scm-firehose,cloudera-scm-alertpublisher,cloudera-scm-eventserver,cloudera-scm-server}
 ```
 
 ### 
