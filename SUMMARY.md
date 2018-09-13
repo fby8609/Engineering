@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Shell](chapter1.md)
+    * [Linux](linux/shell.md)
 * [TCP/IP](tcpip.md)
 * [CDH](cdh.md)
 
