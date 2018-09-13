@@ -49,8 +49,12 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 ```shell
 open https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_vd.html#cmvd_topic_1
 ```
-
 ![](/assets/WX20180913-174424.png)
+
+```
+下载一下3个文件到/opt目录
+```
+![](/assets/WX20180913-174759.png)
 
 ### 
 
