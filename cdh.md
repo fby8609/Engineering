@@ -58,7 +58,7 @@ open https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_v
 
 ```shell
 下载cms manager
-# wget https://archive.cloudera.com/cm5/cm/5/cloudera-manager-el6-cm5.13.3_x86_64.tar.gz
+# wget https://archive.cloudera.com/cm5/cm/5/cloudera-manager-el6-cm5.13.1_x86_64.tar.gz
 ```
 
 ### 
