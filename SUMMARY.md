@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
     * [Linux](linux/README.md)
-        * [Shell](linux/shell/walkfile.md)
+        * [Shell脚本](linux/shell/walkfile.md)
     * [BigData](bigdata/README.md)
         * [CDH安装部署](bigdata/cdh/CDH.md)
     * [NetWork](network/tcpip.md)
