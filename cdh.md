@@ -29,21 +29,79 @@ JRE_HOME=$JAVA_HOME/jre
 - 安装Mysql5.7
 
 ```shell
-open https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/
-# vim /etc/yum.repos.d/mysql-community.repo
+安装Mysql7.5
+# cd /opt; wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+# sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+# yum update
+# sudo yum install mysql-server
+# sudo systemctl start mysqld
+修改配置文件
+#sudo service mysqld stop
+#vim /etc/my.cnf
+[mysqld]
+transaction-isolation = READ-COMMITTED
+# Disabling symbolic-links is recommended to prevent assorted security risks;
+# to do so, uncomment this line:
+# symbolic-links = 0
 
-# Enable to use MySQL 5.7
-[mysql57-community]
-name=MySQL 5.7 Community Server
-baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/
-enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+key_buffer_size = 32M
+max_allowed_packet = 32M
+thread_stack = 256K
+thread_cache_size = 64
+query_cache_limit = 8M
+query_cache_size = 64M
+query_cache_type = 1
 
-#yum repolist enabled | grep mysql
-#yum install mysql-community-server
-#service mysqld start
+max_connections = 550
+#expire_logs_days = 10
+#max_binlog_size = 100M
+
+#log_bin should be on a disk with enough free space. Replace '/var/lib/mysql/mysql_binary_log' with an appropriate path for your system
+#and chown the specified folder to the mysql user.
+log_bin=/var/lib/mysql/mysql_binary_log
+
+# For MySQL version 5.1.8 or later. For older versions, reference MySQL documentation for configuration help.
+binlog_format = mixed
+
+read_buffer_size = 2M
+read_rnd_buffer_size = 16M
+sort_buffer_size = 8M
+join_buffer_size = 8M
+
+# InnoDB settings
+innodb_file_per_table = 1
+innodb_flush_log_at_trx_commit  = 2
+innodb_log_buffer_size = 64M
+innodb_buffer_pool_size = 4G
+innodb_thread_concurrency = 8
+innodb_flush_method = O_DIRECT
+innodb_log_file_size = 512M
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+
+sql_mode=STRICT_ALL_TABLES
+
+添加开机启动
+#sudo /sbin/chkconfig mysqld on
+#sudo /sbin/chkconfig --list mysqld
+
+初始化安全配置
+#sudo /usr/bin/mysql_secure_installation
+
+下载JDBC驱动
+open http://www.mysql.com/downloads/connector/j/5.1.html
+# sudo mkdir -p /usr/share/java/
+# sudo cp mysql-connector-java-5.1.31/mysql-connector-java-5.1.31-bin.jar /usr/share/java/mysql-connector-java.jar
+
+创建数据库
+mysql> create database database DEFAULT CHARACTER SET utf8;
+mysql> grant all on database.* TO 'user'@'%' IDENTIFIED BY 'password';
+
 ```
+![](/assets/WX20180913-194533.png)
+
 - 安装Cloudera Manager Server和 Agent
 
 ```shell
@@ -81,6 +139,11 @@ server_port=7182
 在每个集群节点创建parcels目录
 #mkdir -p /opt/cloudera/parcels
 #chown username:groupname /opt/cloudera/parcels
+```
+- 初始化数据库
+
+```
+
 ```
 
 ### 
