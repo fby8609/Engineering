@@ -74,6 +74,13 @@ server_port=7182
 创建日志及配置目录
 # mkdir -p /var/log/{cloudera-scm-headlamp,cloudera-scm-firehose,cloudera-scm-alertpublisher,cloudera-scm-eventserver}
 # mkdir -p /var/lib/{cloudera-scm-headlamp,cloudera-scm-firehose,cloudera-scm-alertpublisher,cloudera-scm-eventserver,cloudera-scm-server}
+#chown -R cloudera-scm:cloudera-scm /var/log/cloudera-scm-headlamp
+创建CDH包目录
+#mkdir -p /opt/cloudera/parcel-repo
+#chown username:groupname /opt/cloudera/parcel-repo
+在每个集群节点创建parcels目录
+#mkdir -p /opt/cloudera/parcels
+#chown username:groupname /opt/cloudera/parcels
 ```
 
 ### 
