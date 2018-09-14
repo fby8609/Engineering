@@ -27,7 +27,7 @@
 └── modules.d //模块配置文件
 
 ## 配置文件
-```yml
+```yaml
 
 filebeat.inputs:
 - type: log
