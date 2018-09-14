@@ -119,3 +119,9 @@ output.kafka:
 logging.level: info
 
 ```
+
+## 向ES中写入模板
+
+```shell
+url -XPUT -H 'Content-Type: application/json' http://127.0.0.1:9200/_template/filebeat-6.4.0 -d@filebeat.template.json
+```
