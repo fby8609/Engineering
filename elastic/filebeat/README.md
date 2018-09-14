@@ -125,3 +125,9 @@ logging.level: info
 ```shell
 url -XPUT -H 'Content-Type: application/json' http://127.0.0.1:9200/_template/filebeat-6.4.0 -d@filebeat.template.json
 ```
+
+## 向kibana中写入视图模板
+
+```shell
+filebeat setup --dashboards
+```
