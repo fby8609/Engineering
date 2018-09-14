@@ -92,4 +92,31 @@ filebeat.inputs:
     negate: true
     match: after
 
+#============================= Filebeat modules ===============================
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: true
+  reload.period: 10s
+  
+#================================ Outputs =====================================
+
+output.kafka:
+  hosts: ['127.0.0.1:9092']
+  topic: 'test-log-3'
+  partition.round_robin:
+    reachable_only: false
+
+  required_acks: 1
+  compressmax_message_bytes: 1000000
+  compression: snappy
+  timeout: 5m
+  keep_alive: 30s
+  
+#================================ Logging =====================================
+
+# Sets log level. The default log level is info.
+# Available log levels are: error, warning, info, debug
+logging.level: info
+
 ```
