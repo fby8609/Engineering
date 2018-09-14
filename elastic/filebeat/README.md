@@ -131,3 +131,9 @@ curl -XPUT -H 'Content-Type: application/json' http://127.0.0.1:9200/_template/f
 ```shell
 filebeat setup --dashboards
 ```
+
+## 启动服务
+```shell
+filebeat -c filebeat.yml test config
+nohup filebeat -c filebeat.yml &
+```
