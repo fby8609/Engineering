@@ -28,6 +28,8 @@
 
 ## 配置文件
 ```yaml
+###################### Filebeat Configuration Example #########################
+#=========================== Filebeat inputs =============================
 
 filebeat.inputs:
 - type: log
@@ -37,7 +39,57 @@ filebeat.inputs:
   exclude_lines: ['^DBG']
   exclude_files: ['.gz$']
   fields:
-    serverName: 'hostA'
+    serverName: 'HostA'
     logType: 'message'
+
+- type: log
+  enabled: true
+  paths:
+    - /var/log/secure*
+  exclude_lines: ['^DBG']
+  exclude_files: ['.gz$']
+  fields:
+    serverName: 'HostA'
+    logType: 'secure'
+  multiline:
+    pattern: "^\\s"
+    match: after
+
+- type: log
+  enabled: true
+  paths:
+    - /var/log/nginx/*_access.log
+  exclude_lines: ['^DBG']
+  exclude_files: ['.gz$']
+  fields:
+    serverName: 'HostA'
+    logType: 'nginx'
+  multiline:
+    pattern: '^{"date'
+    negate: true
+    match: after
+    
+- type: log
+  enabled: true
+  paths:
+    - /var/log/db_log/mysql-error_5*
+  exclude_lines: ['^DBG']
+  exclude_files: ['.gz$']
+  fields:
+    serverName: 'HostA'
+    logType: 'mysql-error'
+
+- type: log
+  enabled: true
+  paths:
+    - /var/log/db_log/mysql-slow*
+  exclude_lines: ['^# Time:']
+  fields:
+    serverName: 'HostA'
+    logType: 'mysql-slow'
+  multiline:
+    pattern: "^# User@Host:"
+    negate: true
+    match: after
 
 ```
