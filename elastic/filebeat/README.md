@@ -35,9 +35,8 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
-    - /var/log/messages
-  exclude_lines: ['^DBG']
-  exclude_files: ['.gz$']
+    - /var/log/messages  //日志采集路径
+  exclude_files: ['.gz$']  //排除.gz结尾的文件
   fields:
     serverName: 'HostA'
     logType: 'message'
