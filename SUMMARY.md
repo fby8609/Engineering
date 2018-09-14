@@ -7,5 +7,5 @@
         * [CDH安装部署](bigdata/cdh/CDH.md)
     * [NetWork](network/tcpip.md)
     * [ELK](elastic/README.md)
-        * [ELK](elastic/filebeat/README.md)
+        * [Beats](elastic/filebeat/README.md)
 
