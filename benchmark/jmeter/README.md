@@ -27,3 +27,4 @@ jmeter.save.saveservice.time = true
 生成图标
 # jmeter -g D:\apache-jmeter-3.0\bin\testLogFile -o ./output
 ```
+![](/assets/WX20180927-110901.png)
