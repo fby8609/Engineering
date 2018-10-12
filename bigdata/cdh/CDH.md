@@ -159,6 +159,8 @@ open http://www.mysql.com/downloads/connector/j/5.1.html
 #sudo $CMF_DEFAULTS/etc/init.d/cloudera-scm-server start 
 #sudo $CMF_DEFAULTS/etc/init.d/cloudera-scm-agent start 
 
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
 
 访问 http://127.0.0.1:7180
 ```
