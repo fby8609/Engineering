@@ -160,7 +160,7 @@ open http://www.mysql.com/downloads/connector/j/5.1.html
 #sudo $CMF_DEFAULTS/etc/init.d/cloudera-scm-agent start 
 
 
-访问 http://127.0.0.1:8700
+访问 http://127.0.0.1:7180
 ```
 
 
