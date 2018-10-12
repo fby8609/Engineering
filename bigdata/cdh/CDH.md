@@ -146,6 +146,14 @@ server_port=7182
 在每个集群节点创建parcels目录
 #mkdir -p /opt/cloudera/parcels
 #chown username:groupname /opt/cloudera/parcels
+
+下载JDBC驱动
+open http://www.mysql.com/downloads/connector/j/5.1.html
+# sudo mkdir -p /usr/share/java/
+# sudo cp mysql-connector-java-5.1.31/mysql-connector-java-5.1.31-bin.jar /usr/share/java/mysql-connector-java.jar
+# sudo cp /usr/share/java/mysql-connector-java-5.1.47-bin.jar /opt/cloudera-manager/cm-5.13.1/share/cmf/lib
+
+
 启动server 和 agent
 
 #sudo $CMF_DEFAULTS/etc/init.d/cloudera-scm-server start 
