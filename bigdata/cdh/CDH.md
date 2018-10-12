@@ -166,6 +166,8 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
 
+hive /opt/cloudera/parcels/CDH-5.13.1-1.cdh5.13.1.p0.2/lib/hive/lib
+
 ### 
 
 
