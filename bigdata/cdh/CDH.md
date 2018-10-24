@@ -153,6 +153,8 @@ open http://www.mysql.com/downloads/connector/j/5.1.html
 # sudo cp mysql-connector-java-5.1.31/mysql-connector-java-5.1.31-bin.jar /usr/share/java/mysql-connector-java.jar
 # sudo cp /usr/share/java/mysql-connector-java-5.1.47-bin.jar /opt/cloudera-manager/cm-5.13.1/share/cmf/lib
 
+数据库初始化
+# ./scm_prepare_database.sh   mysql cm -h ops-test-004 -uroot -p'1qaz@WSX3edc$RFV' --scm-host ops-test-004 root  '1qaz@WSX3edc$RFV'
 
 启动server 和 agent
 
