@@ -12,6 +12,8 @@
         * [Beats](elastic/filebeat/README.md)
     * [Benchmark](benchmark/README.md)
         * [jmeter](benchmark/jmeter/README.md)
+    * [Kubernets](Kubernets/README.md)
+
 
 
 
