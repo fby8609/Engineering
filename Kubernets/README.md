@@ -12,5 +12,5 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/python-rhsm-certificat
 rpm2cpio python-rhsm-certificates-1.19.10-1.el7_4.x86_64.rpm | cpio -iv --to-stdout ./etc/rhsm/ca/redhat-uep.pem | tee /etc/rhsm/ca/redhat-uep.pem
 
 2.问题
-单机版kubernetes，NodeIp:NodePort不通，需要进一步排查
+单机版kubernetes，NodeIp:NodePort不通，需要进一步排查。
 ```
