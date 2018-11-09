@@ -13,4 +13,6 @@ rpm2cpio python-rhsm-certificates-1.19.10-1.el7_4.x86_64.rpm | cpio -iv --to-std
 
 2.问题
 单机版kubernetes，NodeIp:NodePort不通，需要进一步排查。
+解决方案：
+iptables -P FORWARD ACCEPT
 ```
