@@ -85,4 +85,8 @@
   ![](/assets/vpc_geli.png)
   - 混合云
   ![](/assets/vpc_hunhe.png)
+  - 多应用流量波动大
+  ![](/assets/vpc_duoyingyong.png)
   
+- 使用限制
+![](/assets/vpc_limit.png)
