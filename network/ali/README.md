@@ -81,4 +81,8 @@
   ![](/assets/tuo_guan_active.png)
   - 跨可用区容灾
   ![](/assets/vpc_ha.png)
+  - 业务隔离（对等互联要收取费用）
+  ![](/assets/vpc_geli.png)
+  - 混合云
+  ![](/assets/vpc_hunhe.png)
   
