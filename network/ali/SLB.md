@@ -28,3 +28,15 @@
 
 - 安全
 结合云盾，可提供5Gbps的防DDOS攻击能力。
+
+# 基础框架
+负载均衡采用集群部署，可实现会话同步，以消除服务器单点故障，提升冗余，保证服务的稳定性。
+
+阿里云当前提供四层（TCP协议和UDP协议）和七层（HTTP和HTTPS协议）的负载均衡服务。
+
+- 四层采用开源软件LVS（Linux Virtual Server）+ keepalived的方式实现负载均衡，并根据云计算需求对其进行了个性化定制。
+- 七层采用Tengine实现负载均衡。Tengine是由淘宝网发起的Web服务器项目，它在Nginx的基础上，针对有大访问量的网站需求，添加了很多高级功能和特性。
+![](/assets/SLB-LVS.png)
+
+#功能
+![](/assets/SLB-user.jpg)
