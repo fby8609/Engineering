@@ -12,3 +12,7 @@
 ## 使用限制
 ![](/assets/NAT-limit.jpg)
 ![](/assets/NAT-limit-1.jpg)
+![](/assets/NAT-栗米条.jpg)
+
+## 实践
+![](/assets/NAT-Pool.jpg)
