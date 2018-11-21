@@ -11,3 +11,4 @@
 
 ## 使用限制
 ![](/assets/NAT-limit.jpg)
+![](/assets/NAT-limit-1.jpg)
