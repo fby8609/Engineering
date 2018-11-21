@@ -40,3 +40,12 @@
 
 #功能
 ![](/assets/SLB-user.jpg)
+
+#选择性能规格
+![](/assets/SLB-guige.jpg)
+
+#选择协议
+![](/assets/SLB-schema.jpg)
+
+#后端服务器
+![](/assets/SLB-ECS.jpg)
