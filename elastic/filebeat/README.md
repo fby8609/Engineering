@@ -137,3 +137,6 @@ filebeat setup --dashboards
 filebeat -c filebeat.yml test config
 nohup filebeat -c filebeat.yml &
 ```
+
+logstash-patterns
+/mnt/logstash/vendor/bundle/jruby/2.3.0/gems/logstash-patterns-core-4.1.2/patterns
