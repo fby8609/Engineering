@@ -1,26 +1,31 @@
 # CDH5.13 安装部署
 
 ## 环境
+
 ```
 Centos6.8 X86_64
 CDH5.13
+
 ```
+
 ## 集群架构及角色分配
-![](/assets/WX20180913-150645.png)
+
+![](/assets/WX20180913-150645.png)  
 ![](/assets/WX20180913-151016.png)
 
 ## 端口分布
+
 ![](/assets/WX20180913-152903.png)
 
 ## 准备工作
-- 安装系统依赖
+
+* 安装系统依赖
 
 ```shell
 yum install -y cyrus-sasl-gssapi cyrus-sasl-plain fuse fuse-libs gcc init-functions libxslt mod_ssl MySQL-python openssl openssl-devel perl portmap psmisc python-devel python-psycopg2 python-setuptools sqlite swig zlib gcc-c++ automake libtool flex bison pkgconfig gcc-c++ boost-devel libevent-devel zlib-devel Python-devel ruby-devel crypto-utils openssl openssl-devel glibc-static libstdc++-static ncurses-devel sqlite-devel readline-devel tk-devel gcc make cyrus-sasl-plain  cyrus-sasl-devel  cyrus-sasl-gssapi tkinter tcl-devel tk-devel bzip2-devel snappy
-
 ```
 
-- 安装Oracle JDK: 
+* 安装Oracle JDK: 
 
 ```shell
 open http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
@@ -33,7 +38,8 @@ PATH=$PATH:$JAVA_HOME/bin
 CLASSPATH=.:$JAVA_HOME/lib
 JRE_HOME=$JAVA_HOME/jre
 ```
-- 安装Mysql5.7
+
+* 安装Mysql5.7
 
 ```shell
 安装Mysql7.5
@@ -105,20 +111,22 @@ open http://www.mysql.com/downloads/connector/j/5.1.html
 创建数据库
 mysql> create database database DEFAULT CHARACTER SET utf8;
 mysql> grant all on database.* TO 'user'@'%' IDENTIFIED BY 'password';
-
 ```
+
 ![](/assets/WX20180913-194533.png)
 
-- 安装Cloudera Manager Server和 Agent
+* 安装Cloudera Manager Server和 Agent
 
 ```shell
 open https://www.cloudera.com/documentation/enterprise/release-notes/topics/cm_vd.html#cmvd_topic_1
 ```
+
 ![](/assets/WX20180913-174424.png)
 
 ```
 下载一下3个文件到/opt目录
 ```
+
 ![](/assets/WX20180913-174759.png)
 
 ```shell
@@ -166,7 +174,6 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 
 访问 http://127.0.0.1:7180
 ```
-
 
 hive /opt/cloudera/parcels/CDH-5.13.1-1.cdh5.13.1.p0.2/lib/hive/lib
 
