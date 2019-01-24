@@ -5,6 +5,7 @@
         * [Shell脚本](linux/shell/walkfile.md)
         * [Upstart](linux/upstart/README.md)
         * [Monitor](linux/monitor/README.md)
+        * [Proc](linux/proc/README.md)
     * [BigData](bigdata/README.md)
         * [CDH安装部署](bigdata/cdh/CDH.md)
     * [NetWork](network/tcpip.md)
