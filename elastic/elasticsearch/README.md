@@ -4,7 +4,7 @@
 **开启慢日志**
 
 
-
+```
 PUT {INDEX_PAATERN}/_settings
 {
     "index.indexing.slowlog.level": "INFO",
@@ -23,3 +23,4 @@ PUT {INDEX_PAATERN}/_settings
     "index.search.slowlog.threshold.fetch.debug": "500ms",
     "index.search.slowlog.threshold.fetch.trace": "200ms"
 }
+```
