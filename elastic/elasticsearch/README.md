@@ -7,6 +7,12 @@
 curl -XPUT -H"Content-Type: application/json" 'http://127.0.0.1:9200/twitter' -d '{"settings": {"index": {"number_of_shards": 8,"number_of_replicas": 1}}}'
 ```
 
+**删除索引**
+
+```
+curl -XDELETE http://127.0.0.1:9200/{index_name}
+```
+
 **开启慢日志**
 
 ```
