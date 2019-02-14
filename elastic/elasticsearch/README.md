@@ -1,8 +1,13 @@
 # Elasticsearch 
 ---
 
-**开启慢日志**
+**创建索引**
 
+```
+curl -XPUT -H"Content-Type: application/json" 'http://127.0.0.1:9200/twitter' -d '{"settings": {"index": {"number_of_shards": 8,"number_of_replicas": 1}}}'
+```
+
+**开启慢日志**
 
 ```
 PUT {INDEX_PAATERN}/_settings
