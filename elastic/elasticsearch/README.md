@@ -35,3 +35,9 @@ PUT {INDEX_PAATERN}/_settings
     "index.search.slowlog.threshold.fetch.trace": "200ms"
 }
 ```
+
+**head插件**
+
+```
+通过Chorme浏览器安装Head插件：ElasticSearch Head
+```
