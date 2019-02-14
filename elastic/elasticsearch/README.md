@@ -2,6 +2,7 @@
 ---
 - 开启慢日志
 
+
 ```
 PUT {INDEX_PAATERN}/_settings
 {
