@@ -41,3 +41,34 @@ PUT {INDEX_PAATERN}/_settings
 ```
 通过Chorme浏览器安装Head插件：ElasticSearch Head
 ```
+
+**数据迁移**
+
+```
+①更新elasticsearch集群配置文件并逐台重启
+# vim elasticsearch.yml
+# path.repo: /mnt/xxx/my_backup
+
+②创建snapshot Repositories
+curl -XPUT -H"Content-Type: application/json" 'http://127.0.0.1:9200/_snapshot/my_backup' -d '{"type": "fs", "settings": {"compress": true, "location": "/mnt/xxx/my_backup"}}'
+
+验证：
+curl http://127.0.0.1:9200/_snapshot/my_backup
+
+③备份指定索引
+curl -XPUT -H'Content-Type: application/json' 'http://127.0.0.1:9200/_snapshot/my_backup/orders_20180827_snapshot?wait_for_completion=true' -d '{"indices": "orders_20180827"}'
+
+查看备份状态：
+curl 'http://127.0.0.1:9200/_snapshot/my_backup/orders_20180827_snapshot'
+curl 'http://127.0.0.1:9200/_snapshot/my_backup/_all'
+
+④目标集群创建snapshot Respositories
+curl -XPUT -H"Content-Type: application/json" 'http://127.0.0.1:9200/_snapshot/my_backup' -d '{"type": "fs", "settings": {"compress": true, "location": "/mnt/xxx/my_backup"}}'
+
+验证：
+curl http://127.0.0.1:9200/_snapshot/my_backup
+
+⑤恢复索引：
+
+curl -XPOST -H'Content-Type: application/json' 'http://127.0.0.1:9200/_snapshot/my_backup/orders_20180827_snapshot/_restore'
+```
